@@ -1,0 +1,23 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "Backend Code for Facegram",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/voltShavika/facegram.git"
+  },
+  "keywords": [
+    "nodejs",
+    "expressjs"
+  ],
+  "author": "shavika619@gmail.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/voltShavika/facegram/issues"
+  },
+  "homepage": "https://github.com/voltShavika/facegram#readme"
+}
