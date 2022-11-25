@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const url = "mongodb://localhost:27017/facegram"
+const url = "mongodb+srv://shavika:Cant@2019@cluster0.evijg.mongodb.net/facegram?retryWrites=true&w=majority"
 
 const connectDB = function(){
   mongoose.connect(url, {
