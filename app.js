@@ -1,4 +1,5 @@
 const express = require("express");
+const cors = require('cors');
 const bodyParser = require("body-parser");
 const Session = require("express-session");
 const cookieParser= require("cookie-parser");
@@ -11,6 +12,7 @@ connect();
 
 
 const app = express();
+app.use(cors());
 app.set("view engine","ejs");
 
 
