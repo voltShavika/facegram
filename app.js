@@ -17,7 +17,7 @@ app.use(jsonparser);
 
 app.use(UserRouter);
 app.use(PostRouter);
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 80;
 app.listen(port,()=>{
   console.log("i am listening");
 });
