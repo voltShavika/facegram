@@ -9,11 +9,17 @@ const PostRouter = require("./controllers/post.controller");
 const connect = require("./config/db");
 connect();
 
+
 const app = express();
+app.set("view engine","ejs");
 
 
 const jsonparser = bodyParser.json();
 app.use(jsonparser);
+
+app.get("/", (req, res) => {
+  res.render("home.ejs");
+})
 
 app.use(UserRouter);
 app.use(PostRouter);
