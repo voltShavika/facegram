@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const postSchema = new mongoose.Schema({
   postedBy: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "user"
+        ref: "User"
     },
   image:{
     type:String
@@ -14,14 +14,14 @@ const postSchema = new mongoose.Schema({
   likes:[
     {
       type:mongoose.Schema.Types.ObjectId,
-      ref:"user"
+      ref:"User"
     }
   ],
   comments:[
     {
       by:{
         type:mongoose.Schema.Types.ObjectId,
-        ref:"user"
+        ref:"User"
       },
       text:{
         type:String

@@ -5,7 +5,7 @@ const router = express.Router();
 
 router.get("/api/posts", async function(req,res){
   try {
-    var posts = await Post.find({})
+    var posts = await Post.find({}).populate("postedBy")
     res.send({
       code: 1,
       msg: "All posts sent",
