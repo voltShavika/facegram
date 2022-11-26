@@ -24,7 +24,7 @@ router.post("/api/signup",async function(req,res){
   } catch (e) {
       res.send({
         code: 0,
-        msg: "User not created"
+        msg: "email should be unique"
       })
   }
 
@@ -70,16 +70,25 @@ router.get("/api/user/:id",async function(req,res){
 router.post("/api/login",async function(req,res){
   try {
     var user = await User.findOne({email:req.body.email});
-    var hash = await bcryptjs.compare(req.body.password,user.password)
-    res.send({
-      code:1,
-      msg:"login successfull",
-      data:user
-    })
+    var hash = await bcryptjs.compare(req.body.password, user.password)
+    if(hash){
+      res.send({
+        code:1,
+        msg:"login successfull",
+        data:user
+      })
+    }
+    else{
+      res.send({
+        code:0,
+        msg:"Password Incorrect",
+        data:null
+      })
+    }
   } catch (e) {
     res.send({
       code:0,
-      msg:"not successfull",
+      msg:"User not found",
       data:null
     })
   }
