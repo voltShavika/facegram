@@ -20,8 +20,8 @@ jobs:
           paths:
             - ./node_modules
       - run:
-          name: Build application for production
-          command: npm run build 
+          name: Run App
+          command: npm start 
       - run:
           name: Deploy app to Firebase
           command: ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN  
