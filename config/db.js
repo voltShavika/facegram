@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
-// const url = "mongodb+srv://shavika:Cant2019@cluster0.evijg.mongodb.net/facegram?retryWrites=true&w=majority"
-const url = "mongodb://localhost:27017/facegram"
+const url = "mongodb+srv://shavika:Cant2019@cluster0.evijg.mongodb.net/facegram?retryWrites=true&w=majority"
+// const url = "mongodb://localhost:27017/facegram"
 const connectDB = function(){
   mongoose.connect(url, {
     useNewUrlParser: true,
